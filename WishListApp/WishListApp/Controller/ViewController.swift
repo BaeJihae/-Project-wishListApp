@@ -9,28 +9,63 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var productImageView: UIImageView!
+    @IBOutlet weak var productBrandLabel: UILabel!
+    @IBOutlet weak var productTitleLabel: UILabel!
+    @IBOutlet weak var productPriceLabel: UILabel!
+    @IBOutlet weak var productDescriptionLabel: UILabel!
+    @IBOutlet weak var addToWishButton: UIButton!
     
     let dataManager = ProductDataManager()
     var coreDataManager = ProductCoreDataManager.shared
     
+    var randomid = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setData()
+        setRandomID()
+        setDataAndLabel()
     }
     
-    func setData() {
-        
+    func setRandomID() {
         guard let randomId = (1...100).randomElement() else { return }
-        dataManager.getProductData(id: randomId ) { product in
+        randomid = randomId
+    }
+    
+    func setDataAndLabel() {
+        dataManager.getProductData(id: randomid ) { product in
             DispatchQueue.main.async {
                 if let product = product {
                     dump(product)
-                    self.coreDataManager.setProductCoreData(data: product)
+                    self.setData(product)
                 }
             }
         }
     }
+    
+    func setData(_ product: Product) {
+        
+        if let url = URL(string: product.thumbnail) {
+            URLSession.shared.dataTask(with: url) { data, response, error in
+                if let data = data, error == nil {
+                    DispatchQueue.main.async {
+                        self.productImageView.image = UIImage(data: data)
+                    }
+                }
+            }.resume()
+        }
+        productBrandLabel.text = product.brand
+        productTitleLabel.text = product.title
+        productPriceLabel.text = "\(product.price) 원"
+        productDescriptionLabel.text = product.description
+    }
+    
+    @IBAction func addToWishTapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func nextToItemTapped(_ sender: UIButton) {
+        setRandomID()
+        setDataAndLabel()
+    }
 }
-

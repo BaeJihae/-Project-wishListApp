@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct ProductDataManager: Codable{
     
@@ -46,6 +47,7 @@ struct ProductDataManager: Codable{
             do {
                 let decoder = JSONDecoder()
                 let product = try decoder.decode(Product.self, from: safeData)
+            
                 completion(product)
             } catch {
                 print("Error: 데이터를 decoder하는데에 실패하였습니다.")
