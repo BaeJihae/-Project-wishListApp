@@ -28,8 +28,8 @@ class TableViewController: UITableViewController {
         let productData = productDataList[indexPath.row]
         
         cell.wishCartBrandLabel.text = productData.brand
-        cell.wishCartPriceLabel.text = "$ \(productData.price)"
-        cell.wishCartTitleLabel.text = productData.title
+        cell.wishCartPriceLabel.text = ViewController().setPriceLabel(price: Int(productData.price))
+        cell.wishCartTitleLabel.text = "[\(productData.id)] \(productData.title!)"
         
         if let thumbnail = productData.thumbnail {
             if let url = URL(string: thumbnail) {

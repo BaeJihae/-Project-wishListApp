@@ -44,6 +44,14 @@ class ViewController: UIViewController {
         }
     }
     
+    func setPriceLabel(price: Int) -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        
+        guard let priceString = numberFormatter.string(from: NSNumber(value: price)) else { return "" }
+        return "$ " + priceString
+    }
+    
     func setData(_ product: Product) {
         
         currentProduct = product
@@ -61,7 +69,7 @@ class ViewController: UIViewController {
         }
         productBrandLabel.text = product.brand
         productTitleLabel.text = product.title
-        productPriceLabel.text = "\(product.price) 원"
+        productPriceLabel.text = setPriceLabel(price: product.price)
         productDescriptionLabel.text = product.description
     }
     
