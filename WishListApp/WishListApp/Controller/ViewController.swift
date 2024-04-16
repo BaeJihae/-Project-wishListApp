@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     var coreDataManager = ProductCoreDataManager.shared
     
     var randomid = 0
+    var currentProduct: Product?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,10 @@ class ViewController: UIViewController {
     
     func setData(_ product: Product) {
         
+        currentProduct = product
+        
+        print("현재의 제품 정보 : \(currentProduct)")
+        
         if let url = URL(string: product.thumbnail) {
             URLSession.shared.dataTask(with: url) { data, response, error in
                 if let data = data, error == nil {
@@ -61,7 +66,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addToWishTapped(_ sender: UIButton) {
-        
+        guard let product = currentProduct else { return }
+        coreDataManager.setProductCoreData(data: product)
     }
     
     @IBAction func nextToItemTapped(_ sender: UIButton) {
