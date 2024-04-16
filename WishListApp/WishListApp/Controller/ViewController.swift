@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         
         currentProduct = product
         
-        print("현재의 제품 정보 : \(currentProduct)")
+        print("현재의 제품 정보 : \(String(describing: currentProduct))")
         
         if let url = URL(string: product.thumbnail) {
             URLSession.shared.dataTask(with: url) { data, response, error in
