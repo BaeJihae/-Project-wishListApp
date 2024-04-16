@@ -20,6 +20,7 @@
 		2E7A39782BCE404A009026EC /* ProductData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7A39762BCE404A009026EC /* ProductData+CoreDataClass.swift */; };
 		2E7A39792BCE404A009026EC /* ProductData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7A39772BCE404A009026EC /* ProductData+CoreDataProperties.swift */; };
 		2E7A397B2BCE4846009026EC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7A397A2BCE4846009026EC /* TableViewController.swift */; };
+		2E7A397D2BCE5309009026EC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7A397C2BCE5309009026EC /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		2E7A39762BCE404A009026EC /* ProductData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2E7A39772BCE404A009026EC /* ProductData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2E7A397A2BCE4846009026EC /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		2E7A397C2BCE5309009026EC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				2E167A402BCCFE740028A37D /* ViewController.swift */,
 				2E7A397A2BCE4846009026EC /* TableViewController.swift */,
+				2E7A397C2BCE5309009026EC /* TableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				2E7A397B2BCE4846009026EC /* TableViewController.swift in Sources */,
 				2E167A572BCCFFCE0028A37D /* Product.swift in Sources */,
 				2E167A642BCD0F1D0028A37D /* ProductCoreDataManager.swift in Sources */,
+				2E7A397D2BCE5309009026EC /* TableViewCell.swift in Sources */,
 				2E167A3D2BCCFE740028A37D /* AppDelegate.swift in Sources */,
 				2E7A39782BCE404A009026EC /* ProductData+CoreDataClass.swift in Sources */,
 				2E7A39792BCE404A009026EC /* ProductData+CoreDataProperties.swift in Sources */,
