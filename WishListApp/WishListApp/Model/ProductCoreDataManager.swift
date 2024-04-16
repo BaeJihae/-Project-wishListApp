@@ -58,6 +58,7 @@ struct ProductCoreDataManager {
             // 변경 사항 저장
             try context.save()
             
+            print(" 데이터가 저장되었습니다.")
         } catch {
             print("Error updating ProductData: \(error)")
         }
