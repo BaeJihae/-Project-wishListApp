@@ -63,4 +63,39 @@ struct ProductCoreDataManager {
             print("Error updating ProductData: \(error)")
         }
     }
+    
+    mutating func getProductCoredata() -> [ProductData] {
+        var ProductList = [ProductData]()
+        
+        guard let context = context else {
+            return ProductList
+        }
+        
+        let fetchRequest: NSFetchRequest<ProductData> = ProductData.fetchRequest()
+        
+        let sortDescriptor = NSSortDescriptor(key: "id", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        do {
+            ProductList = try context.fetch(fetchRequest)
+        } catch {
+            print("Error fetching todo list data: \(error)")
+        }
+        
+        return ProductList
+    }
+    
+    mutating func deleteCoreData(_ productData: ProductData) {
+        guard let context = context else {
+            return
+        }
+        
+        context.delete(productData)
+        
+        do {
+            try context.save()
+        } catch {
+            print("Error deleting todo data: \(error)")
+        }
+    }
 }

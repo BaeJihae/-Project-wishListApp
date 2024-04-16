@@ -44,11 +44,19 @@ class ViewController: UIViewController {
         }
     }
     
+    func setPriceLabel(price: Int) -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        
+        guard let priceString = numberFormatter.string(from: NSNumber(value: price)) else { return "" }
+        return "$ " + priceString
+    }
+    
     func setData(_ product: Product) {
         
         currentProduct = product
         
-        print("현재의 제품 정보 : \(currentProduct)")
+        print("현재의 제품 정보 : \(String(describing: currentProduct))")
         
         if let url = URL(string: product.thumbnail) {
             URLSession.shared.dataTask(with: url) { data, response, error in
@@ -61,7 +69,7 @@ class ViewController: UIViewController {
         }
         productBrandLabel.text = product.brand
         productTitleLabel.text = product.title
-        productPriceLabel.text = "\(product.price) 원"
+        productPriceLabel.text = setPriceLabel(price: product.price)
         productDescriptionLabel.text = product.description
     }
     
