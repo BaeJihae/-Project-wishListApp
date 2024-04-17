@@ -13,6 +13,19 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setRefreshScroll()
+    }
+    
+    func setRefreshScroll() {
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+    }
+    
+    @objc func refresh(_ sender: AnyObject) {
+        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+            self.tableView.refreshControl?.endRefreshing()
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: - Table view data source
