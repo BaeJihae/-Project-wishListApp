@@ -24,6 +24,8 @@ struct ProductCoreDataManager {
     // 엔터티 이름 (코어 데이터에 저장된 객체)
     let modelName: String = "ProductData"
     
+    
+    // MARK: - setFunc
     // TodoData를 생성하는 메서드
     mutating func setProductCoreData(data: Product) {
         
@@ -64,6 +66,8 @@ struct ProductCoreDataManager {
         }
     }
     
+    
+    // MARK: - getFunc
     mutating func getProductCoredata() -> [ProductData] {
         var ProductList = [ProductData]()
         
@@ -85,6 +89,8 @@ struct ProductCoreDataManager {
         return ProductList
     }
     
+    
+    // MARK: - deleteFunc
     mutating func deleteCoreData(_ productData: ProductData) {
         guard let context = context else {
             return

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var productPriceLabel: UILabel!
     @IBOutlet weak var productDescriptionLabel: UILabel!
     @IBOutlet weak var addToWishButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     let dataManager = ProductDataManager()
     var coreDataManager = ProductCoreDataManager.shared
@@ -22,15 +23,30 @@ class ViewController: UIViewController {
     var randomid = 0
     var currentProduct: Product?
     
+    
+    // MARK: - ViewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setRandomID()
         setDataAndLabel()
+        setRefreshControl()
     }
+    
+
+    // MARK: - setDataAndLabel
     
     func setRandomID() {
         guard let randomId = (1...100).randomElement() else { return }
         randomid = randomId
+    }
+    
+    func setPriceLabel(price: Int) -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        
+        guard let priceString = numberFormatter.string(from: NSNumber(value: price)) else { return "" }
+        return "$ " + priceString
     }
     
     func setDataAndLabel() {
@@ -42,14 +58,6 @@ class ViewController: UIViewController {
                 }
             }
         }
-    }
-    
-    func setPriceLabel(price: Int) -> String {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        
-        guard let priceString = numberFormatter.string(from: NSNumber(value: price)) else { return "" }
-        return "$ " + priceString
     }
     
     func setData(_ product: Product) {
@@ -73,10 +81,34 @@ class ViewController: UIViewController {
         productDescriptionLabel.text = product.description
     }
     
+    
+    // MARK: - refreshControl
+    
+    func setRefreshControl() {
+        scrollView.refreshControl = UIRefreshControl()
+        scrollView.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        scrollView.refreshControl?.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+    }
+    
+    @objc func refresh(_ sender: AnyObject) {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+1){
+            self.setRandomID()
+            self.setDataAndLabel()
+            self.scrollView.refreshControl?.endRefreshing()
+        }
+    }
+    
+    
+    // MARK: - addToWishButton
+    
     @IBAction func addToWishTapped(_ sender: UIButton) {
         guard let product = currentProduct else { return }
         coreDataManager.setProductCoreData(data: product)
     }
+    
+    
+    // MARK: - nextToItem
     
     @IBAction func nextToItemTapped(_ sender: UIButton) {
         setRandomID()

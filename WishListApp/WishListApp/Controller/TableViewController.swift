@@ -20,7 +20,7 @@ class TableViewController: UITableViewController {
         return coreDataManager.getProductCoredata().count
     }
 
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "wishItemCell", for: indexPath) as! TableViewCell
 
