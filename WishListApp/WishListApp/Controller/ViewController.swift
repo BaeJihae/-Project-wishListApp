@@ -9,13 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var productBrandLabel: UILabel!
     @IBOutlet weak var productTitleLabel: UILabel!
     @IBOutlet weak var productPriceLabel: UILabel!
     @IBOutlet weak var productDescriptionLabel: UILabel!
     @IBOutlet weak var addToWishButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageScrollView: UIScrollView!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     let dataManager = ProductDataManager()
     var coreDataManager = ProductCoreDataManager.shared
@@ -23,6 +24,7 @@ class ViewController: UIViewController {
     var randomid = 0
     var currentProduct: Product?
     
+    var images = [UIImage]()
     
     // MARK: - ViewDidLoad
     
@@ -31,6 +33,11 @@ class ViewController: UIViewController {
         setRandomID()
         setDataAndLabel()
         setRefreshControl()
+        
+        imageScrollView.delegate = self
+        
+        addContentScrollView()
+        setPageControl()
     }
     
 
@@ -63,24 +70,52 @@ class ViewController: UIViewController {
     func setData(_ product: Product) {
         
         currentProduct = product
-        
-        print("현재의 제품 정보 : \(String(describing: currentProduct))")
-        
-        if let url = URL(string: product.thumbnail) {
-            URLSession.shared.dataTask(with: url) { data, response, error in
-                if let data = data, error == nil {
-                    DispatchQueue.main.async {
-                        self.productImageView.image = UIImage(data: data)
-                    }
-                }
-            }.resume()
-        }
         productBrandLabel.text = product.brand
         productTitleLabel.text = product.title
         productPriceLabel.text = setPriceLabel(price: product.price)
         productDescriptionLabel.text = product.description
+        
+        images.removeAll()
+        imageScrollView.subviews.forEach { $0.removeFromSuperview() } // 기존 이미지 뷰 제거
+        
+        for imageURL in product.images {
+            if let url = URL(string: imageURL) {
+                URLSession.shared.dataTask(with: url) { data, response, error in
+                    if let data = data, error == nil {
+                        DispatchQueue.main.async {
+                            if let image = UIImage(data: data) {
+                                self.images.append(image)
+                                self.addContentScrollView()
+                                self.setPageControl()
+                            }
+                        }
+                    }
+                }.resume()
+            }
+        }
     }
     
+    // MARK: - PageControl & scrollView
+    
+    func addContentScrollView() {
+        var xOffset: CGFloat = 0
+        for image in images {
+            let imageView = UIImageView(image: image)
+            imageView.frame = CGRect(x: xOffset, y: 0, width: imageScrollView.bounds.width, height: imageScrollView.bounds.height)
+            imageView.contentMode = .scaleAspectFit
+            imageScrollView.addSubview(imageView)
+            xOffset += imageScrollView.bounds.width
+        }
+        imageScrollView.contentSize = CGSize(width: xOffset, height: imageScrollView.bounds.height)
+    }
+    
+    func setPageControl() {
+        pageControl.numberOfPages = images.count
+    }
+    
+    func setPageControlSelectedPage(currentPage: Int) {
+        pageControl.currentPage = currentPage
+    }
     
     // MARK: - refreshControl
     
@@ -113,5 +148,12 @@ class ViewController: UIViewController {
     @IBAction func nextToItemTapped(_ sender: UIButton) {
         setRandomID()
         setDataAndLabel()
+    }
+}
+
+extension ViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let value = scrollView.contentOffset.x/scrollView.frame.size.width
+        setPageControlSelectedPage(currentPage: Int(round(value)))
     }
 }
