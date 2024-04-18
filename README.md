@@ -46,7 +46,7 @@ WishListApp은 사용자가 갖고 싶어하는 아이템을 자신의 위시 �
 ***
 
 #### Envirionment
-<img src="https://img.shields.io/badge/xcode-black?style=for-the-badge&logo=Xcode&logoColor=147EFB"><img src="https://img.shields.io/badge/git-black?style=for-the-badge&logo=git&logoColor=F05032"><img src="https://img.shields.io/badge/github-blue?style=for-the-badge&logo=github&logoColor=181717">
+<img src="https://img.shields.io/badge/xcode-black?style=for-the-badge&logo=Xcode&logoColor=147EFB"><img src="https://img.shields.io/badge/github-blue?style=for-the-badge&logo=github&logoColor=181717"><img src="https://img.shields.io/badge/git-black?style=for-the-badge&logo=git&logoColor=F05032">
 
 #### Development
 <img src="https://img.shields.io/badge/Swift-black?style=for-the-badge&logo=swift&logoColor=F05138"><img src="https://img.shields.io/badge/uikit-black?style=for-the-badge&logo=uikit&logoColor=2396F3">
@@ -95,8 +95,7 @@ Main 화면에서 사진을 왼쪽과 오른쪽으로 스와이프할 시, 다�
 사용자가 원하는 갖고 싶은 제품이 나왔을 때, 왼쪽 하단의 "Add to Wish" 버튼 클릭 시 Wish List에 담긴다.
 
 <p align="center">
- <img src="https://velog.velcdn.com/images/jihae__qu/post/b09167a0-becc-4d31-9247-7b6c5a641166/image.gif
-" width=200 >
+ <img src="https://velog.velcdn.com/images/jihae__qu/post/b09167a0-becc-4d31-9247-7b6c5a641166/image.gif" width=200 >
 </p>
 
 
@@ -107,8 +106,7 @@ Main 화면에서 사진을 왼쪽과 오른쪽으로 스와이프할 시, 다�
 사용자가 다음 제품을 보고싶을 때, 오른쪽 하단의 "Next to Item" 버튼 클릭 시 새로운 제품을 화면에 띄운다.
 
 <p align="center">
- <img src="https://velog.velcdn.com/images/jihae__qu/post/9b003afc-c678-4b7b-81f1-1795bc75c23a/image.gif
-" width=200 >
+ <img src="https://velog.velcdn.com/images/jihae__qu/post/9b003afc-c678-4b7b-81f1-1795bc75c23a/image.gif" width=200 >
 </p>
 
 <br>
@@ -118,8 +116,7 @@ Main 화면에서 사진을 왼쪽과 오른쪽으로 스와이프할 시, 다�
 Main 화면에서 아래로 스크롤을 당기면 새로고침이 되며 새로고침이 완료되면 새로운 제품을 화면에 띄운다.
 
 <p align="center">
- <img src="https://velog.velcdn.com/images/jihae__qu/post/c5244b44-f2d0-44da-bc68-1028dd76fc72/image.gif"
- width=200 >
+ <img src="https://velog.velcdn.com/images/jihae__qu/post/c5244b44-f2d0-44da-bc68-1028dd76fc72/image.gif" width=200 >
 </p>
 
 <br>
@@ -129,8 +126,7 @@ Main 화면에서 아래로 스크롤을 당기면 새로고침이 되며 새로
 오른쪽 상단에 "장바구니" 버튼을 클릭할 시 사용자의 wishList를 보여준다.
 
 <p align="center">
- <img src="blob:https://velog.io/b9d8d309-a986-4fd6-9efd-126a244ce4c5
-" width=200 >
+ <img src="blob:https://velog.io/b9d8d309-a986-4fd6-9efd-126a244ce4c5" width=200 >
 </p>
 
 <br>
@@ -140,8 +136,7 @@ Main 화면에서 아래로 스크롤을 당기면 새로고침이 되며 새로
 wishList 화면에서 "삭제" 버튼 클릭 시 해당 제품이 wishlist에서 삭제된다. 
 
 <p align="center">
- <img src="blob:https://velog.io/d126df71-15d0-4fdf-bdf4-6c9360b2b07f
-" width=200 >
+ <img src="blob:https://velog.io/d126df71-15d0-4fdf-bdf4-6c9360b2b07f" width=200 >
 </p>
 
 <br>
