@@ -80,6 +80,7 @@ WishListApp은 사용자가 갖고 싶어하는 아이템을 자신의 위시 �
 ***
 
 * **Image Slide**
+
 Main 화면에서 사진을 왼쪽과 오른쪽으로 스와이프할 시, 다양한 제품 사진을 보여준다.
 
 <p align="center">
@@ -92,6 +93,7 @@ Main 화면에서 사진을 왼쪽과 오른쪽으로 스와이프할 시, 다�
 <br>
 
 * **Add to Wish 버튼**
+
 사용자가 원하는 갖고 싶은 제품이 나왔을 때, 왼쪽 하단의 "Add to Wish" 버튼 클릭 시 Wish List에 담긴다.
 
 <p align="center">
@@ -103,6 +105,7 @@ Main 화면에서 사진을 왼쪽과 오른쪽으로 스와이프할 시, 다�
 <br>
 
 * **Next to Item 버튼**
+
 사용자가 다음 제품을 보고싶을 때, 오른쪽 하단의 "Next to Item" 버튼 클릭 시 새로운 제품을 화면에 띄운다.
 
 <p align="center">
@@ -113,6 +116,7 @@ Main 화면에서 사진을 왼쪽과 오른쪽으로 스와이프할 시, 다�
 <br>
 
 * **Pull to Refresh**
+
 Main 화면에서 아래로 스크롤을 당기면 새로고침이 되며 새로고침이 완료되면 새로운 제품을 화면에 띄운다.
 
 <p align="center">
@@ -123,20 +127,22 @@ Main 화면에서 아래로 스크롤을 당기면 새로고침이 되며 새로
 <br>
 
 * **WishList 버튼**
+
 오른쪽 상단에 "장바구니" 버튼을 클릭할 시 사용자의 wishList를 보여준다.
 
 <p align="center">
- <img src="blob:https://velog.io/b9d8d309-a986-4fd6-9efd-126a244ce4c5" width=200 >
+ <img src="https://velog.velcdn.com/images/jihae__qu/post/32a1a9c6-c79b-4982-b424-0fe7bc8404e3/image.gif" width=200 >
 </p>
 
 <br>
 <br>
 
 * **Delete 버튼**
+
 wishList 화면에서 "삭제" 버튼 클릭 시 해당 제품이 wishlist에서 삭제된다. 
 
 <p align="center">
- <img src="blob:https://velog.io/d126df71-15d0-4fdf-bdf4-6c9360b2b07f" width=200 >
+ <img src="https://velog.velcdn.com/images/jihae__qu/post/1cf5b454-e911-478b-96e7-003f58dd4dcf/image.gif" width=200 >
 </p>
 
 <br>
