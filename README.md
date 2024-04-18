@@ -31,7 +31,7 @@ WishListApp은 사용자가 갖고 싶어하는 아이템을 자신의 위시 �
 
 <br>   
 
-#### 🕹️ ** 기술 스택 **
+#### 🕹️ **기술 스택**
 
 ##### Envirionment
 <img src="https://img.shields.io/badge/xcode-black?style=for-the-badge&logo=Xcode&logoColor=147EFB"><img src="https://img.shields.io/badge/git-black?style=for-the-badge&logo=git&logoColor=F05032"><img src="https://img.shields.io/badge/github-blue?style=for-the-badge&logo=github&logoColor=181717">
