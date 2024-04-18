@@ -107,6 +107,7 @@ class ViewController: UIViewController {
             xOffset += imageScrollView.bounds.width
         }
         imageScrollView.contentSize = CGSize(width: xOffset, height: imageScrollView.bounds.height)
+        
     }
     
     func setPageControl() {

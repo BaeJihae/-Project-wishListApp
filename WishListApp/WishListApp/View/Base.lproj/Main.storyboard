@@ -43,7 +43,10 @@
                                                 </constraints>
                                             </view>
                                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="OnK-w1-sNY">
-                                                <rect key="frame" x="100" y="352" width="193" height="26"/>
+                                                <rect key="frame" x="0.0" y="368" width="393" height="10"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="10" id="gAS-7c-MhW"/>
+                                                </constraints>
                                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </pageControl>
@@ -93,9 +96,9 @@
                                             <constraint firstAttribute="trailing" secondItem="b75-Mg-m8X" secondAttribute="trailing" id="FhN-NM-mY7"/>
                                             <constraint firstAttribute="trailing" secondItem="del-H5-iM6" secondAttribute="trailing" constant="20" id="MCY-D7-Mrg"/>
                                             <constraint firstItem="b75-Mg-m8X" firstAttribute="bottom" secondItem="OnK-w1-sNY" secondAttribute="bottom" constant="15" id="Vdf-ls-anF"/>
-                                            <constraint firstAttribute="trailing" secondItem="OnK-w1-sNY" secondAttribute="trailing" constant="100" id="bxR-ot-Lnn"/>
+                                            <constraint firstAttribute="trailing" secondItem="OnK-w1-sNY" secondAttribute="trailing" id="bxR-ot-Lnn"/>
                                             <constraint firstAttribute="trailing" secondItem="iTF-8R-hpE" secondAttribute="trailing" constant="20" id="ecJ-FN-Z70"/>
-                                            <constraint firstItem="OnK-w1-sNY" firstAttribute="leading" secondItem="zfT-mx-s0S" secondAttribute="leading" constant="100" id="fEs-hF-An9"/>
+                                            <constraint firstItem="OnK-w1-sNY" firstAttribute="leading" secondItem="zfT-mx-s0S" secondAttribute="leading" id="fEs-hF-An9"/>
                                             <constraint firstItem="hWb-F7-JCO" firstAttribute="top" secondItem="O9O-Ty-PqF" secondAttribute="bottom" constant="15" id="glW-GD-KT2"/>
                                             <constraint firstAttribute="trailing" secondItem="O9O-Ty-PqF" secondAttribute="trailing" constant="20" id="jmM-h6-PiJ"/>
                                             <constraint firstItem="iTF-8R-hpE" firstAttribute="top" secondItem="hWb-F7-JCO" secondAttribute="bottom" constant="20" id="kir-Pc-gJ4"/>
@@ -367,13 +370,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
