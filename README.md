@@ -56,11 +56,11 @@ WishListApp은 사용자가 갖고 싶어하는 아이템을 자신의 위시 �
 <br>
 
 
-#### 🌱 데이터 구조
+### 🌱 데이터 구조
 ***
 
 
-##### Product Struct
+#### Product Struct
 
 ``` swift
 struct Product: Codable {
@@ -76,12 +76,28 @@ struct Product: Codable {
 ```
 
 
-##### CoreData
+#### CoreData
 
 <p align="center">
  <img src="https://velog.velcdn.com/images/jihae__qu/post/ec999fa1-c8ca-463d-ab6e-f1d4c30e2d77/image.png" width=400 >
 </p>
 
+<br>   
+<br>
+
+
+### Project 구조
+***
+
+<p align="center">
+ <img src="https://github.com/BaeJihae/-Project-wishListApp/assets/95227560/6bf92062-725d-4a80-a208-e5941f3c8f30" width=400 >
+</p>
+
+
+
+
+<br>   
+<br>
 
 ### 📱 화면 구성
 ***
