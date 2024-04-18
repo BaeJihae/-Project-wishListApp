@@ -178,10 +178,37 @@ wishList 화면에서 "삭제" 버튼 클릭 시 해당 제품이 wishlist에서
 #### ✏️ 블로그 정리
 ***
 
-[[ Project ] WishListApp #1 / URLSession을 이용해 데이터 불러오기](https://jihae-qu.tistory.com/76)
-[[ Project ] WishListApp #2 /  UI 작업 및 데이터 적용하기](https://jihae-qu.tistory.com/77)
-[[ Project ] WishListApp #3 / CoreData에 데이터 저장하기](https://jihae-qu.tistory.com/80)
-[[ Project ] WishListApp #4 / CoreData에 저장된 데이터 TableView로 출력하기 / 버튼으로 코어데이터 삭제하기](https://jihae-qu.tistory.com/81)
-[[ Project ] WishListApp #5 / Pull to Refresh 적용하기 / UIRefreshControl](https://jihae-qu.tistory.com/84)
-[[ Project ] WishListApp #6 / UIPageControl과 ScrollView를 사용한 이미지 스와이프 구현하기](https://jihae-qu.tistory.com/89)
-[[ Project ] WishListApp #7 / App Icon 변경하기](https://jihae-qu.tistory.com/90)
+| 순서 | 블로그 링크 |
+|:---:|:---|
+| 1 | [[ Project ] WishListApp #1 / URLSession을 이용해 데이터 불러오기](https://jihae-qu.tistory.com/76) |
+| 2 | [[ Project ] WishListApp #2 / UI 작업 및 데이터 적용하기](https://jihae-qu.tistory.com/77)|
+| 3 | [[ Project ] WishListApp #3 / CoreData에 데이터 저장하기](https://jihae-qu.tistory.com/80)|
+| 4 | [[ Project ] WishListApp #4 / CoreData에 저장된 데이터 TableView로 출력하기 / 버튼으로 코어데이터 삭제하기](https://jihae-qu.tistory.com/81)|
+| 5 | [[ Project ] WishListApp #5 / Pull to Refresh 적용하기 / UIRefreshControl](https://jihae-qu.tistory.com/84)|
+| 6 | [[ Project ] WishListApp #6 / UIPageControl과 ScrollView를 사용한 이미지 스와이프 구현하기](https://jihae-qu.tistory.com/89)|
+| 7 | [[ Project ] WishListApp #7 / App Icon 변경하기](https://jihae-qu.tistory.com/90)|
+
+
+<br>
+<br>
+
+#### ✏️ 프로젝트 후 회고
+***
+
+##### Q :
+
+A :
+
+
+##### Q :
+
+A :
+
+##### Q :
+
+A :
+
+##### Q :
+
+A :
+
