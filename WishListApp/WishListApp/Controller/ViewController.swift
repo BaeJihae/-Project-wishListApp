@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var productBrandLabel: UILabel!
     @IBOutlet weak var productTitleLabel: UILabel!
@@ -114,8 +114,9 @@ class ViewController: UIViewController {
         pageControl.numberOfPages = images.count
     }
     
-    func setPageControlSelectedPage(currentPage: Int) {
-        pageControl.currentPage = currentPage
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let value = scrollView.contentOffset.x/scrollView.frame.size.width
+        pageControl.currentPage = Int(round(value))
     }
     
     // MARK: - refreshControl
@@ -149,12 +150,5 @@ class ViewController: UIViewController {
     @IBAction func nextToItemTapped(_ sender: UIButton) {
         setRandomID()
         setDataAndLabel()
-    }
-}
-
-extension ViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let value = scrollView.contentOffset.x/scrollView.frame.size.width
-        setPageControlSelectedPage(currentPage: Int(round(value)))
     }
 }
