@@ -56,6 +56,32 @@ WishListApp은 사용자가 갖고 싶어하는 아이템을 자신의 위시 �
 <br>
 
 
+#### 🌱 데이터 구조
+***
+
+
+##### Product Struct
+
+``` swift
+struct Product: Codable {
+    let id: Int
+    let title, description: String
+    let price: Int
+    let discountPercentage: Double
+    let brand, category: String
+    let thumbnail: String
+    let images: [String]
+}
+
+```
+
+
+##### CoreData
+
+<p align="center">
+ <img src="https://velog.velcdn.com/images/jihae__qu/post/ec999fa1-c8ca-463d-ab6e-f1d4c30e2d77/image.png" width=400 >
+</p>
+
 
 ### 📱 화면 구성
 ***
@@ -149,27 +175,13 @@ wishList 화면에서 "삭제" 버튼 클릭 시 해당 제품이 wishlist에서
 <br>
 <br>
 
-
-#### 🌱 데이터 구조
+#### ✏️ 블로그 정리
 ***
 
-
-##### Product Struct
-
-``` swift
-struct Product: Codable {
-    let id: Int
-    let title, description: String
-    let price: Int
-    let discountPercentage: Double
-    let brand, category: String
-    let thumbnail: String
-    let images: [String]
-}
-
-```
-
-
-##### CoreData
-
-![](https://velog.velcdn.com/images/jihae__qu/post/ec999fa1-c8ca-463d-ab6e-f1d4c30e2d77/image.png)
+[[ Project ] WishListApp #1 / URLSession을 이용해 데이터 불러오기](https://jihae-qu.tistory.com/76)
+[[ Project ] WishListApp #2 /  UI 작업 및 데이터 적용하기](https://jihae-qu.tistory.com/77)
+[[ Project ] WishListApp #3 / CoreData에 데이터 저장하기](https://jihae-qu.tistory.com/80)
+[[ Project ] WishListApp #4 / CoreData에 저장된 데이터 TableView로 출력하기 / 버튼으로 코어데이터 삭제하기](https://jihae-qu.tistory.com/81)
+[[ Project ] WishListApp #5 / Pull to Refresh 적용하기 / UIRefreshControl](https://jihae-qu.tistory.com/84)
+[[ Project ] WishListApp #6 / UIPageControl과 ScrollView를 사용한 이미지 스와이프 구현하기](https://jihae-qu.tistory.com/89)
+[[ Project ] WishListApp #7 / App Icon 변경하기](https://jihae-qu.tistory.com/90)
