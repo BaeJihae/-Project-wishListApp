@@ -213,25 +213,50 @@ wishList 화면에서 "삭제" 버튼 클릭 시 해당 제품이 wishlist에서
 
 #### Q : CoreData의 각 Entity, Attribute, Relationship의 역할은?
 
-A :
+A : CoreData의 Entity는 하나의 데이터 집합체로 객체입니다.
 
+Entity의 하위 속성이 되어주는 것이 Attribute입니다.
+CoreData내에는 여러개의 Entity가 존재할 수 있고, Entity 간에는 관계를 정의할 수 있는데 이때 관계를 Realtionship이라고 합니다. 
+
+<br>
 
 #### Q : 앱 화면의 콘텐츠를 표시하는 로직과 관리를 담당하는 객체는?
 
-A :
+A : 앱의 뷰 계층구조를 관리해주는 객체인 UIViewController입니다.
+
+화면 위의 보여지는 UIButton, UILabel 등을 UIView라고 하는데요. 이 UIView들의 로직과 관리를 담당합니다.
+뷰에서 일어난 이벤트를 감지하여 업데이트해주고, 뷰와 사용자 간의 상호작용에 반응하고, view들의 위치나 크기를 조정해주는 역할을 합니다. 
+
+<br>
 
 #### Q : 앱의 콘텐츠나 데이터 자체를 내부 저장/보관하는 특별한 객체로는 무엇이 있는지?
 
-A :
+A : Local DB에는 CoreData, SQLite, Realm 이 있습니다.
+
+CoreData는 애플에서 제공하는 프레임워크입니다. 크고 복잡한 데이터를 체계적으로 저장할 수 있고, 데이터를 객체로 다룰 수 있어 편리하게 사용할 수 있는 장점이 있습니다.
+
+그에 반해 SQLite와 Realm은 외부 라이브러리인데요!
+Realm은 모바일에 최적화된 데이터 베이스로 SQLite와 CoreData에 비해 속도가 빠르고, 성능이 좋다는 장점이 있습니다. 하지만, 메인 스레드에서 다른 스레드로 접근할 대 에러가 발생할 수 있다는 단점이 있습니다.
+SQLite는 매우 작고 가벼워서 전체 데이터 베이스를 하나의 디스크 파일에 저장할 수 있고, 다양한 OS에서 사용할 수 있다는 장점이 있습니다. 하지만, CoreData와 Realm에 비교해서 성능이 떨어진다는 단점이 있습니다.
+
+<br>
 
 #### Q : URLSession이란?
 
-A :
+A : URLSession이란 클라이언트와 서버간의 네트워크 통신을 하기위해 애플에서 기본적으로 제공하고 있는 API입니다. 
 
-#### Q : URLSession이란?
+요청을 하는 Request와 요청을 받는 Response 구조로 이루어져 있으며, 요청 메서드의 종류에는 Get, Post, Put, Update 등이 있습니다.
 
-A :
+Request할 url을 생성후에 configuration을 통해 메서드를 정하고, 그에 맞는 새로운 URLSession 인스턴스를 생성하여 dataTask 함수를 통해 데이터를 받아오는 과정을 통해 네트워크 통신을 할 수 있습니다. dataTask는 자체적으로 비동기적으로 작업하기 때문에 데이터를 사용하기 위해서는 콜백함수를 사용해야합니다.
+
+<br>
 
 #### Q : 이번 챕터에서 학습을 하며 알게된 기술, 지식을 정리
 
-A : 
+A : ScrollView를 메인보드에서 적용할 때 ScrollView에 대한 Layout을 설정하는 방법을 알게되었습니다.
+
+URLSession으로 통신할 때, URLSession은 DataTask 작업을 자체적으로 비동기적으로 진행합니다. 그래서 작업에서 받아온 데이터를 사용하기 위해서는 콜백함수를 사용해야 한다는 것을 알게 되었습니다.
+
+또한 이미지를 좌우로 넘기는 기능을 구현하기 위해 UIPageControl이라는 객체를 공부하게 되었습니다. UIPageControl은 여러 페이지나 여러 객체들을 점으로 표현하여 현재 사용자에게 보여지고 있는 페이지를 점으로 표시하도록 도와주는 객체입니다. 이번 챕터에서 UIPageControl과 ScrollView를 함께 사용하여 여러 이미지를 보여줄 수 있는 기능을 구현하였습니다.
+
+<br>
